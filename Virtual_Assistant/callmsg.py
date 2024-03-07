@@ -21,7 +21,7 @@ def takecommand():
         audio = r.listen(source)
     try:
         print("Recognizing...")
-        query = r.recognize_google(audio, language='en-US')  # Corrected language code
+        query = r.recognize_google(audio, language='en-US') 
         print(f"User said: {query}\n")
     except Exception as e:
         speak("Sorry, I didn't catch that. Could you please repeat?")
@@ -58,7 +58,7 @@ def sendmail(to, content):
         server.ehlo()
         server.starttls()
 
-        # Use your Gmail email address and the generated App Password
+        
         server.login('gparjapati097@gmail.com', 'shadow#gmail')
 
         server.sendmail("gparjapati097@gmail.com", to, content)
